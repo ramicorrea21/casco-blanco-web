@@ -7,7 +7,7 @@ export default function Navbar(){
                 <Image 
                 src='/img/logo.png'
                 width={280}
-                height={49}
+                height={44}
                 alt="Logo"
                 className="hidden md:block md:ml-5"
                 priority
@@ -15,7 +15,7 @@ export default function Navbar(){
                 <Image 
                 src='/img/logo.png'
                 width={200}
-                height={35}
+                height={31}
                 alt="Logo"
                 className="md:hidden ml-3 mt-1"
                 priority

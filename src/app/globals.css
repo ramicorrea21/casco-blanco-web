@@ -4,18 +4,18 @@
 
 .video-container{
     width: 99%;
-    height: 92vh;
+    height: 75vh;
 }
 
 video{
     width: 99%;
-    height: 92%;
+    height: 75vh;
     object-fit: cover;
 }
 
 .content{
     width: 99%;
-    height: 92%;
+    height: 75vh;
     top: 0;
     display: flex;
 }
@@ -25,7 +25,11 @@ video{
     top: 0;
     left: 0;
     width: 99%;
-    height: 92%;
-    background-color: rgba(0, 0, 0, .1);
+    height: 75vh;
+    background-color: rgba(0, 0, 0, .2);
     border-radius: 1%;
+}
+
+.separador{
+    width: 98%;
 }
