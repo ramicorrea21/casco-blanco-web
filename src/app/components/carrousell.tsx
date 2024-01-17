@@ -16,7 +16,7 @@ class Carrousel extends React.Component {
       autoplay: true,
       autoplaySpeed: 5000,
       cssEase: "linear"
-    };
+    }
 
     return (
       <Slider {...settings}>
