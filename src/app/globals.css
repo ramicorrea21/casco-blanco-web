@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+
+body{
+    background-image: url("../../public/img/fondo.jpg");
+}
+
 .video-container{
     width: 99%;
     height: 75vh;
@@ -44,4 +49,8 @@ video{
 
 .premium-button{
     background: linear-gradient(rgb(79, 118, 157), rgb(160, 199, 248));
+}
+
+.footer-cont{
+    width: 98%;
 }
