@@ -33,3 +33,15 @@ video{
 .separador{
     width: 98%;
 }
+
+.section-cont{
+    width: 98%;
+}
+
+.amazing-button{
+    background: linear-gradient(rgb(255, 171, 102), rgb(255, 122, 0));
+}
+
+.premium-button{
+    background: linear-gradient(rgb(79, 118, 157), rgb(160, 199, 248));
+}

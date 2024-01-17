@@ -2,7 +2,7 @@ import Image from "next/image"
 export default function Navbar(){
     return(
         <>
-        <nav className="sticky top-0 z-50 bg-white">
+        <nav className="sticky top-0 z-50 bg-white py-2">
             <div className="flex justify-between mt-1 md:mt-1">
                 <Image 
                 src='/img/logo.png'

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import './globals.css'
-import localFont from '@next/font/local'
+import localFont from 'next/font/local'
 import Navbar from './components/navbar'
 
 const VitesseSans = localFont({src : '../../public/font/VitesseSans/VITESSESANS-MEDIUM.otf'})
