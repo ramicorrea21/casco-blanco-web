@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import './globals.css'
 import localFont from 'next/font/local'
-import Navbar from './components/navbar'
+import NavBar from './components/navbar'
 import Footer from './components/footer'
 
 const VitesseSans = localFont({src : '../../public/font/VitesseSans/VITESSESANS-MEDIUM.otf'})
@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={VitesseSans.className}>
-        <Navbar/>
+        <NavBar/>
         {children}
         <div className='footer-cont'>
         <Footer/>

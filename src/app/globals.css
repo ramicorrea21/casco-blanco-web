@@ -32,7 +32,7 @@ video{
     width: 99%;
     height: 75vh;
     background-color: rgba(0, 0, 0, .2);
-    border-radius: 1%;
+    border-radius: 2%;
 }
 
 .separador{
@@ -53,4 +53,8 @@ video{
 
 .footer-cont{
     width: 98%;
+}
+
+body{
+    margin-top: 0;
 }
