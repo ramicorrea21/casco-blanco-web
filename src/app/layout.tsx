@@ -1,11 +1,14 @@
 import type { Metadata } from 'next'
 import './globals.css'
-import localFont from 'next/font/local'
+import { Inter } from 'next/font/google'
 import NavBar from './components/navbar'
 import Footer from './components/footer'
 
 
-const VitesseSans = localFont({src : '../../../public/font/VitesseSans/VITESSESANS-MEDIUM.otf'})
+const inter = Inter({
+  subsets: ['latin'],
+})
+
 
 export const metadata: Metadata = {
   title: 'Casco Blanco Materiales',
@@ -19,7 +22,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={VitesseSans.className}>
+      <body className={inter.className}>
         <NavBar/>
         {children}
         <div className='footer-cont'>
