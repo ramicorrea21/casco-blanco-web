@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 export default function WspButton() {
-  const phoneNumber = "+54 9 3516 95-7896";
+  const phoneNumber = "+54 9 3516 95-7869";
   const message = "Hola! queria hacer una consulta sobre Casco Blanco!."; 
 
   const encodedMessage = encodeURIComponent(message);
