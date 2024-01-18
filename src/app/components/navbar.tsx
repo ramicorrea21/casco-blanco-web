@@ -25,7 +25,7 @@ export default function NavBar() {
             alt="logo"
             width={220}
             height={33}
-            className="max-[375px]:hidden max-sm:block hidden ml-1"
+            className="max-[375px]:hidden max-sm:block hidden ml-3"
           />
           <Image
             src="/img/logo.png"
@@ -36,7 +36,7 @@ export default function NavBar() {
           />
         {openMenu && (
           <div className="w-full bg-white bg-opacity-80 absolute block md:hidden max-[375px]:text-sm mt-0   left-0  sm:p-2  z-20">
-            <div className="max-[375px]:ml-4 max-[375px]:mt-2  max-sm:ml-3 max-sm:mt-2 sm:ml-3">
+            <div className="max-[375px]:ml-5 max-[375px]:mt-2  max-sm:ml-5 max-sm:mt-2 sm:ml-3">
             <p
               className="cursor-pointer"
               onClick={() => console.log('Hacer algo para "Más información"')}
