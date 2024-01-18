@@ -2,7 +2,7 @@ export default function Banner(){
     return(
         <div className="video-container w-screen relative">
             <div className="overlay rounded-2xl"></div>
-            <video src="/banner/video.mp4" autoPlay loop muted className="rounded-xl"></video>
+            <video src="/banner/video.mp4" autoPlay loop muted playsInline className="rounded-xl"></video>
             <div className="content absolute text-white p-4 flex flex-col  md:ml-3 justify-center">
                 <p className="max-[300px]:text-3xl max-[375px]:text-5xl max-sm:text-6xl max-lg:text-8xl text-9xl">TU MEJOR</p>
                 <p className="max-[300px]:text-3xl max-[375px]:text-5xl  max-sm:text-6xl max-lg:text-8xl text-9xl">CASA</p>
