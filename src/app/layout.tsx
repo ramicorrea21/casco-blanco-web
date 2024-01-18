@@ -4,7 +4,7 @@ import localFont from 'next/font/local'
 import NavBar from './components/navbar'
 import Footer from './components/footer'
 
-const VitesseSans = localFont({src : 'font/VitesseSans/VITESSESANS-MEDIUM.otf'})
+const VitesseSans = localFont({src : '../../public/font/VitesseSans/VITESSESANS-MEDIUM.otf'})
 
 export const metadata: Metadata = {
   title: 'Casco Blanco Materiales',
