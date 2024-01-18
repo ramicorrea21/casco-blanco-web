@@ -3,6 +3,7 @@ import './globals.css'
 import localFont from 'next/font/local'
 import NavBar from './components/navbar'
 import Footer from './components/footer'
+import WspButton from './components/wsp'
 
 const VitesseSans = localFont({src : '../../public/font/VitesseSans/VITESSESANS-MEDIUM.otf'})
 
