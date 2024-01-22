@@ -48,7 +48,7 @@ export default function NavBar() {
                     <p className="cursor-pointer">Información</p>
                   </Link>
                   <Link href="/#sections">
-                    <p>Viviendas</p>
+                    <p>Tipologías</p>
                   </Link>
                 </div>
               </div>
@@ -71,10 +71,10 @@ export default function NavBar() {
         <div className="hidden md:block xl:mr-8 lg:mr-6">
           <div className="flex">
             <Link href='/informacion'>
-            <p className="mr-2 text-xl">Informacion</p>
+            <p className="mr-2 text-xl">Información</p>
             </Link>
             <Link href="/#sections">
-              <p className="text-xl">Viviendas</p>
+              <p className="text-xl">Tipologías</p>
             </Link>
           </div>
         </div>
