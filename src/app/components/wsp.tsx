@@ -27,7 +27,7 @@ export default function WspButton() {
             alt="whatsapp"
             width={200}
             height={100}
-            className="fixed md:hidden bottom-4 right-4 rounded-full cursor-pointer"
+            className="fixed md:hidden bottom-2 right-2 rounded-full cursor-pointer"
           />
         </Link>
       </div>
