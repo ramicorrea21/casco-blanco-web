@@ -14,7 +14,7 @@ export default function Home() {
           <p className="text-slate-600 md:text-xl text-md text-center mt-8 min-[500px]:mb-6   max-[385px]:text-sm max-w-screen-sm lg:max-w-screen-md xl:max-w-screen-lg">
           Construimos tu proyecto con materiales de construcción tradicional y pagás por avance de obra. Trabajamos con las mejores marcas: Palmar, Holcim, FV, Ferrum, Roca, Acindar y más.
           </p>
-          <Link href='tel:+5493517564852' className="max-[500px]:block hidden"><h2 className="text-blue-500 text-center text-md mt-10">Llamar</h2></Link>
+          <Link href='tel:+5493516957869' className="max-[500px]:block hidden"><h2 className="text-blue-500 text-center text-md mt-10">Llamar</h2></Link>
         </div>
         <Sections />
       </div>
