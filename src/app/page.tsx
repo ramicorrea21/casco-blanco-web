@@ -18,7 +18,6 @@ export default function Home() {
         </div>
         <Sections />
       </div>
-      <div className="border border-t border-black separador mt-6"></div>
     </div>
   );
 }

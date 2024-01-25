@@ -1,40 +1,84 @@
 import WspButton from "./wsp";
 import Link from "next/link";
+import { CiMail } from "react-icons/ci";
+import { BsFillTelephoneFill } from "react-icons/bs";
+import { FaFacebookSquare } from "react-icons/fa";
+import { RiInstagramFill } from "react-icons/ri";
+import { FaLinkedin } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
 
-export default function Footer(){
-    return(
-        <>
-        {/* <div><WspButton/></div>
-         <div className="mt-10 mb-5 flex flex-col md:text-start text-center md:flex-row justify-center md:space-x-6 lg:space-x-10 xl:space-x-20 2xl:space-x-32 ">
-         <div className="flex flex-col mt-6 items-center md:items-start">
-                <p className="lg:text-2xl text-lg">CASCO BLANCO CONSTRUCTORA    </p>
-                <div className="mt-3 lg:text-md text-sm flex flex-row"><svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 0 384 512"><path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/></svg> 
-                <p className="mb-2 ml-1">Raúl Hugo Espoile 3021, Barrio Los Naranjos</p></div>
-                <div className="mt-3 lg:text-md text-sm flex flex-row"><svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 512 512"><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/></svg> 
-                <p className="mb-2 ml-1">cascoblanco@gmail.com</p></div>
+export default function Footer() {
+  return (
+    <>
+      <div>
+        <WspButton />
+      </div>
+      <footer className="w-screen mt-28">
+        <div className="p-10 bg-gray-800 text-gray-200">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div className="mb-5">
+                <h4 className="text-2xl pb-4">Casco Blanco Constructora</h4>
+                <p className="text-gray-500">
+                  Raúl Hugo Espoile 3021, <br />
+                  Barrio Los Naranjos, <br />
+                  Córdoba, Argentina <br /> <br />
+                </p>
+              </div>
+              <div className="mb-5">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3404.499612366681!2d-64.23122258818692!3d-31.427909896702225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94329823ba399b07%3A0x637c26c780125f8e!2sCasco%20Blanco%20Materiales!5e0!3m2!1ses-419!2sar!4v1706153340128!5m2!1ses-419!2sar"
+                  width={300}
+                  height={200}
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                />
+              </div>
+              <div className="mb-5">
+                <h4 className="pb-4">Enlaces</h4>
+                <ul className="text-gray-500">
+                  <li className="pb-4 flex">
+                    <CiMail size={25} /> cascoblancomateriales@gmail.com
+                  </li>
+                  <li className="pb-4 flex">
+                    <BsFillTelephoneFill size={20} />
+                    +54 9 3516957869
+                  </li>
+                  <Link href="https://www.facebook.com/cascoblancomateriales/">
+                    <li className="pb-4 flex">
+                      <FaFacebookSquare size={25} />
+                      Casco Blanco Materiales
+                    </li>
+                  </Link>
+                  <Link href="https://www.instagram.com/cascoblanco.m/">
+                    <li className="pb-4 flex">
+                      <RiInstagramFill size={25} />
+                      cascoblanco.m
+                    </li>
+                  </Link>
+                </ul>
+              </div>
+              <div className="mb-5">
+                <h4 className="pb-4">Sitio web hecho por Ramiro Correa</h4>
+                <ul className="text-gray-500">
+                  <Link href="https://www.linkedin.com/in/ramiro-correa/">
+                    <li className="pb-4 flex">
+                      <FaLinkedin size={25} /> Ramiro Correa
+                    </li>
+                  </Link>
+                  <Link href="https://github.com/ramicorrea21">
+                    <li className="pb-4 flex">
+                      <FaGithub size={25} /> ramicorrea21
+                    </li>
+                  </Link>
+                </ul>
+              </div>
             </div>
-            <div className="flex flex-col mt-6 items-center md:items-start">
-                <p className="lg:text-2xl text-lg">Ponerse en contacto</p>
-                <div className="mt-3 lg:text-md text-sm flex flex-row"><svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 0 512 512"><path d="M347.1 24.6c7.7-18.6 28-28.5 47.4-23.2l88 24C499.9 30.2 512 46 512 64c0 247.4-200.6 448-448 448c-18 0-33.8-12.1-38.6-29.5l-24-88c-5.3-19.4 4.6-39.7 23.2-47.4l96-40c16.3-6.8 35.2-2.1 46.3 11.6L207.3 368c70.4-33.3 127.4-90.3 160.7-160.7L318.7 167c-13.7-11.2-18.4-30-11.6-46.3l40-96z"/></svg> 
-                <p className="mb-2 ml-1">3516957869</p></div>
-                <div className="mt-3 lg:text-md text-sm flex flex-row"><svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 512 512"><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/></svg> 
-                <p className="mb-2 ml-1">cascoblancomateriales@gmail.com</p></div>
-            </div>
-            <div className="flex flex-col mt-6">
-                <p className="lg:text-2xl text-lg">Enlaces</p>
-                <Link
-                className="cursor-pointer"
-                href="https://www.facebook.com/cascoblancomateriales/">
-                <p className="mt-3 lg:text-sm text-xs">Facebook</p>
-                </Link>
-                <Link
-                href="https://www.instagram.com/cascoblanco.m/"
-                className="cursor-pointer">
-                <p className="mt-3 lg:text-sm text-xs">Instagram</p>
-                </Link>
-
-            </div>
-        </div>        */}
-        </>
-    )
+          </div>
+        </div>
+      </footer>
+    </>
+  );
 }
