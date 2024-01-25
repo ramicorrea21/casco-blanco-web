@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function Footer(){
     return(
         <>
-        <div><WspButton/></div>
+        {/* <div><WspButton/></div>
          <div className="mt-10 mb-5 flex flex-col md:text-start text-center md:flex-row justify-center md:space-x-6 lg:space-x-10 xl:space-x-20 2xl:space-x-32 ">
          <div className="flex flex-col mt-6 items-center md:items-start">
                 <p className="lg:text-2xl text-lg">CASCO BLANCO CONSTRUCTORA    </p>
@@ -34,7 +34,7 @@ export default function Footer(){
                 </Link>
 
             </div>
-        </div>       
+        </div>        */}
         </>
     )
 }
