@@ -1,7 +1,19 @@
-import React from "react";
+'use client'
+import React, { useState, useEffect} from "react";
 import SecSliders from "../components/secSliders";
+import Loader from "../components/loader";
 
 const Premium: React.FC = () => {
+  const [loading, setLoading] = useState(true)
+  const load = () =>{
+    setTimeout(() =>{
+        setLoading(false)
+    }, 2000)
+  }
+
+  useEffect(() =>{
+    load()
+  }, [])
   const slides = [
     {
       url: "/img/premium/premium-1.png",
@@ -19,7 +31,8 @@ const Premium: React.FC = () => {
 
   return (
     <>
-      <h1 className="text-center mt-5 text-4xl">Viviendas Premium</h1>
+     {loading? <div className="flex justify-center items-center mt-10"><Loader/></div> : <>
+     <h1 className="text-center mt-5 text-4xl">Viviendas Premium</h1>
       <SecSliders slides={slides} />
       <div className="mt-5 max-w-[1400px]  w-full m-auto pt-8 pb-4 px-4">
         <h1 className="text-center text-4xl">Ficha Técnica</h1>
@@ -31,7 +44,7 @@ const Premium: React.FC = () => {
            <li className="mb-1"><strong>TERMINACIONES:</strong> Grifería para baños y cocina marca FV o similar, sanitarios marca Ferrum, Roca o similar, mesada de cocina de granito o piedra de medidas largo mínimo 300cm con bacha, iluminación LED o dicroicas interior y exterior (en sus modelos de plafones o empotradas), todas a criterio de la empresa.  Molduras exteriores de EPS revestidas con base coat y modelo a elección, terminación interior de muros a elección del cliente: revoque fino o yeso. Terminación exterior: revoque fino exterior marca Sika o Weber. Pintura int. y ext. marca Alba con gama color a elección del cliente. </li>
            <li className="mb-1"><strong>PISOS:</strong> De tipo porcelanato en su totalidad y de primera calidad. - pileta de natación: de material, con medidas 3,50 x 7,00 mts, incluye bomba de filtrado, skimmer y losetas atérmicas en bordes.</li>
         </ul>
-      </div>
+      </div></>}
     </>
   );
 };

@@ -1,9 +1,27 @@
+'use client'
 import Banner from "./components/banner";
 import Sections from "./components/sections";
 import Link from "next/link";
+import Loader from "./components/loader";
+import { useState, useEffect } from "react";
+
+
 export default function Home() {
+  const [loading, setLoading] = useState(true)
+  const load = () =>{
+    setTimeout(() =>{
+        setLoading(false)
+    }, 2000)
+  }
+
+  useEffect(() =>{
+    load()
+  }, [])
+
+
   return (
-    <div className="flex flex-col justify-center mt-6 ml-4 md:ml-7 mr-2 md:mr-0">
+    <>
+    {loading? <div className="flex justify-center items-center mt-10"><Loader/></div> : <div className="flex flex-col justify-center mt-6 ml-4 md:ml-7 mr-2 md:mr-0">
       <Banner />
       <div>
         <div className="border border-t border-black separador mt-6"></div>
@@ -18,6 +36,8 @@ export default function Home() {
         </div>
         <Sections />
       </div>
-    </div>
+    </div>}
+      
+    </>
   );
 }

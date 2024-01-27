@@ -1,3 +1,4 @@
+'use client'
 import WspButton from "./wsp";
 import Link from "next/link";
 import { CiMail } from "react-icons/ci";
@@ -6,11 +7,26 @@ import { FaFacebookSquare } from "react-icons/fa";
 import { RiInstagramFill } from "react-icons/ri";
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
+import { useState, useEffect } from "react";
+import Loader from "./loader";
 
 export default function Footer() {
+  const [loading, setLoading] = useState(true)
+  const load = () =>{
+    setTimeout(() =>{
+        setLoading(false)
+    }, 2500)
+  }
+
+  useEffect(() =>{
+    load()
+  }, [])
+
+
+
   return (
     <>
-      <div>
+    {loading? <></> : <><div>
         <WspButton />
       </div>
       <footer className="w-screen mt-28">
@@ -34,7 +50,7 @@ export default function Footer() {
                   allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                />
+                /> 
               </div>
               <div className="mb-5">
                 <h4 className="pb-4">Enlaces</h4>
@@ -78,7 +94,8 @@ export default function Footer() {
             </div>
           </div>
         </div>
-      </footer>
+      </footer></>  }
+      
     </>
   );
 }

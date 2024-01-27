@@ -1,7 +1,19 @@
-import React from "react";
+'use client'
+import React, {useState, useEffect} from "react";
 import SecSliders from "../components/secSliders";
+import Loader from "../components/loader";
 
 const Amazing: React.FC = () => {
+  const [loading, setLoading] = useState(true)
+  const load = () =>{
+    setTimeout(() =>{
+        setLoading(false)
+    }, 2000)
+  }
+
+  useEffect(() =>{
+    load()
+  }, [])
   const slides = [
     {
       url: "/img/amazing/amazing-1.png",
@@ -19,7 +31,7 @@ const Amazing: React.FC = () => {
 
   return (
     <>
-    <h1 className="text-center mt-5 text-4xl">Viviendas Amazing</h1>
+     {loading? <div className="flex justify-center items-center mt-10"><Loader/></div> : <> <h1 className="text-center mt-5 text-4xl">Viviendas Amazing</h1>
       <SecSliders slides={slides} />
       <div className="mt-5 max-w-[1400px]  w-full m-auto pt-8 pb-4 px-4">
         <h1 className="text-center text-4xl">Ficha Técnica</h1>
@@ -31,7 +43,7 @@ const Amazing: React.FC = () => {
            <li className="mb-1"><strong>-TERMINACIONES:</strong> Grifería para baños y cocina marca FV o similar, mesada de granito o piedra de medidas largo mínimo 200cm, revoque fino interior y revoque fino exterior, pintura interior marca alba y exterior marca duralba, con gama de colores a elección del cliente.</li>
            <li className="mb-1"><strong>-PISOS:</strong> De tipo porcelanato en su totalidad y de primera calidad. Casco Blanco® constructora</li>
         </ul>
-      </div>
+      </div></>}
     </>
   );
 };
